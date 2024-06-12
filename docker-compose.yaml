@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: hello-nest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/app
+    ports:
+      - "13000:3000"
+    stdin_open: true
